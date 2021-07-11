@@ -21,6 +21,7 @@ public class HelloWorldController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String helloWorld(Model model) {
+		
 		model.addAttribute("message", messageSource.getMessage("hello", new String[] {"動的パラメータ1","動的パラメータ2"}, Locale.JAPAN));
 		return "index";
 
